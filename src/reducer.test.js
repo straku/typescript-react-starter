@@ -1,5 +1,5 @@
-import { reducer } from '../reducer';
-import { increment, decrement } from '../actions';
+import { reducer } from './reducer';
+import { increment, decrement } from './actions';
 
 test('increment action with value', () => {
   const state = { value: 0 };

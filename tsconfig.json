@@ -9,8 +9,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "src",
-    "strict": true,
-    "noUnusedLocals": true
+    "strict": true
   },
   "include": ["src/**/*"]
 }

@@ -27,10 +27,24 @@ export class Controls extends React.Component<PropsType, StateType> {
       <ControlsElem>
         <Label>
           Change value by:
-          <Input value={value} onChange={this.handleChange} />
+          <Input
+            data-testid="input"
+            value={value}
+            onChange={this.handleChange}
+          />
         </Label>
-        <Button onClick={() => dispatch(increment(value))}>{'+'}</Button>
-        <Button onClick={() => dispatch(decrement(value))}>{'-'}</Button>
+        <Button
+          data-testid="button-increment"
+          onClick={() => dispatch(increment(value))}
+        >
+          {'+'}
+        </Button>
+        <Button
+          data-testid="button-decrement"
+          onClick={() => dispatch(decrement(value))}
+        >
+          {'-'}
+        </Button>
       </ControlsElem>
     );
   }

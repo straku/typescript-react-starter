@@ -6,7 +6,7 @@ import { ActionType, ThunkType } from './actions';
 
 import { Controls } from './components/Controls';
 
-class App extends React.Component<{}, StateType> {
+export class App extends React.Component<{}, StateType> {
   state = getInitialState();
 
   dispatch = (action: ActionType | ThunkType) => {
@@ -20,7 +20,7 @@ class App extends React.Component<{}, StateType> {
   render() {
     return (
       <AppElem>
-        <Value>value: {this.state.value}</Value>
+        <Value data-testid="value">value: {this.state.value}</Value>
         <Controls dispatch={this.dispatch} />
       </AppElem>
     );
@@ -42,5 +42,3 @@ const Value = styled.span`
   font-weight: bold;
   margin-bottom: 1em;
 `;
-
-export default App;
